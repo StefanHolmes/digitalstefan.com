@@ -1,3 +1,15 @@
-    html {
-        background: lightyellow;
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: lightyellow;
+        color: black;
     }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: midnightblue;
+        color: lightyellow;
+    }
+}
