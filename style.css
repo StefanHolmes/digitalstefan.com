@@ -6,7 +6,7 @@
     }
 }
 
-/* Light mode */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: midnightblue;

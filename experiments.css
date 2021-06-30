@@ -1,0 +1,13 @@
+input[type='checkbox']:checked.fancylogo {
+    animation: hue-anim 2s linear infinite;
+    color: #f00;
+}
+
+@keyframes hue-anim {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
