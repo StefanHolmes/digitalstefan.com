@@ -12,4 +12,13 @@
         background-color: midnightblue;
         color: lightyellow;
     }
+    a:link {
+        color:lightskyblue;
+    }
+    a:visited {
+        color:lightslategrey;
+    }
+    a:hover {
+        color:lime;
+    }
 }
