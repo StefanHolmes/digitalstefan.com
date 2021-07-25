@@ -1,16 +1,16 @@
 /* Light mode */
 @media (prefers-color-scheme: light) {
     body {
-        background-color: lightyellow;
-        color: black;
+        background-color:lightyellow;
+        color:black;
     }
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: midnightblue;
-        color: lightyellow;
+        background-color:midnightblue;
+        color:lightyellow;
     }
     a:link {
         color:lightskyblue;
