@@ -1,6 +1,6 @@
 /* Light mode */
 @media (prefers-color-scheme: light) {
-    body {
+    html, body {
         background-color:lightyellow;
         color:black;
     }
@@ -8,7 +8,7 @@
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-    body {
+    html, body {
         background-color:midnightblue;
         color:lightyellow;
     }
@@ -21,4 +21,14 @@
     a:hover {
         color:lime;
     }
+}
+
+/* Common to light and dark mode */
+html, body {
+    font-family: 'Convergence', sans-serif;
+}
+
+h1,h2 {
+    
+    font-family: 'Nobile', sans-serif;
 }
