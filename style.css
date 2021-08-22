@@ -25,6 +25,7 @@
 
 /* Common to light and dark mode */
 html, body {
+    display: block;
     font-family: 'Convergence', sans-serif;
 }
 

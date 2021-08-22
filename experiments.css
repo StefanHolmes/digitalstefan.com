@@ -1,6 +1,18 @@
-input[type='checkbox']:checked.fancylogo {
+.fancytext input[type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.fancytext input[type="checkbox"]:checked+label {
     animation: hue-anim 2s linear infinite;
     color: #f00;
+}
+
+.fancytext {
+    font-family: 'Overpass Mono', monospace;
+    display: flex;
+    width: 100%;
+    font-size: 4rem;
 }
 
 @keyframes hue-anim {
