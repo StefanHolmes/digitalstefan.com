@@ -14,6 +14,31 @@
         <a href="index.html">Back to main page</a>
     </nav>
 
+    <main>
+        <article>
+            <h1>Google Consent Mode</h1>
+            <p>If you know a bit about tracking, look in your browser dev console's Network tab and filter on "collect".
+                If you haven't yet chosen your cookie consent or you have chosen not to consent (and assuming no other
+                privacy blocking is in place), you will still see events being sent to Google Analytics from this site.
+            </p>
+            <p>This is nothing nefarious and it isn't because I've misconfigured the consent management. Google
+                Analytics (new and current) supports being told about user consent and will anonymise the data being
+                sent when no consent is in place.</p>
+            <p>This is a feature of Google Tag Manager and it's supported by Google Analytics as well as other Google
+                services (all focused on ads / marketing). It's quite a new feature, and there are many sites /
+                companies yet to support it and it's not straightforward to retrofit into an existing site.</p>
+            <p>One prerequisite is you (the site operator) <em>must</em> integrate a Consent Management Platform (or
+                develop your own). That platform does exactly what it says. It shows the UI for consent management and
+                handles all the complexities therein.</p>
+            <p>Consent management is a complex topic and implementing it correctly is hard. There are complex legalities
+                (i.e. there are degrees of interpretation) and some site operators choose the 'nuke from orbit' approach
+                by simply blocking <em>everything</em>, including even Google Tag Manager itself if there's no consent
+                present.</p>
+            <p>There's a lot more to be said about Google Consent Mode, but it is paving the way for a future where
+                3rd-party cookies no longer exist. When that happens, site operators will be screaming out for a
+                solution.</p>
+        </article>
+    </main>
 
 </body>
 
