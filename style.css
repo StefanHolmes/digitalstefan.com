@@ -29,9 +29,12 @@ html, body {
     font-family: 'Convergence', sans-serif;
 }
 
-h1,h2 {
-    
+h1,h2,h3 {
     font-family: 'Nobile', sans-serif;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 html {
