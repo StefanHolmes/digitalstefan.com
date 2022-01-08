@@ -15,6 +15,7 @@
     <nav>
         <a href="index.html">Back to main page</a>
     </nav>
+    <p>Click the letters...</p>
     <div class="fancytext">
         <input type="checkbox" id="C1" /><label for="C1">C</label>
         <input type="checkbox" id="L" /><label for="L">L</label>
@@ -22,7 +23,27 @@
         <input type="checkbox" id="C2" /><label for="C2">C</label>
         <input type="checkbox" id="K" /><label for="K">K</label>
     </div>
+    <p>I've used these above to also experiment with adding a Data Layer event. View page source to see.</p>
+    
+    <!-- Maybe split this out to it's own file. Quick experiment for implementing a dataLayer event -->
+    <script>
+        const fancy = document.querySelectorAll("div.fancytext > input")
 
+        fancy.forEach(fancyEach => {
+            fancyEach.addEventListener('click', () => {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'fancytext_click',
+                    'id': fancyEach.id,
+                    'text': fancyEach.nextElementSibling.textContent
+                });
+            });
+        });
+    </script>
+    
+    <hr />
+    
+    <p>Setting custom colour for bullet points (look at the CSS)...</p>
     <div class="css-marker">
         <ul>
             <li>One</li>
