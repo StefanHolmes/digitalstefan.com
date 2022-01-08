@@ -34,8 +34,10 @@
                 window.dataLayer = window.dataLayer || [];
                 dataLayer.push({
                     'event': 'fancytext_click',
-                    'id': fancyEach.id,
-                    'text': fancyEach.nextElementSibling.textContent
+                    'fancytext': {
+                        'id': fancyEach.id,
+                        'text': fancyEach.nextElementSibling.textContent
+                    }
                 });
             });
         });
