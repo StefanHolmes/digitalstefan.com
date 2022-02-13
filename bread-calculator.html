@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DigitalStefan - Bread Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Nobile&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Back to main page</a>
+    </nav>
+
+    <script src="bread.js"></script>
+
+    <form>
+        <fieldset>
+            <legend>Adjust ratios</legend>
+            <label>Flour
+                <input type="number" id="flour_ratio" value="100">
+            </label>
+            <label>Water
+                <input type="number" id="water_ratio" value="65">
+            </label>
+            <label>Yeast
+                <input type="number" id="yeast_ratio" value="1">
+            </label>
+            <label>Salt
+                <input type="number" id="salt_ratio" value="2">
+            </label>
+            <label>Oil
+                <input type="number" id="oil_ratio" value="1.5">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>How much flour, by weight?</legend>
+            <label>Flour
+                <input type="number" id="flour_weight" value="800">
+            </label>
+            <input type="button" value="Calculate" onclick="calcBread();">
+        </fieldset>
+    </form>
+
+    <table class="bread-table">
+        <tr>
+            <td>Water</td>
+            <td id="water_calc"></td>
+        </tr>
+        <tr>
+            <td>Yeast</td>
+            <td id="yeast_calc"></td>
+        </tr>
+        <tr>
+            <td>Salt</td>
+            <td id="salt_calc"></td>
+        </tr>
+        <tr>
+            <td>Oil</td>
+            <td id="oil_calc"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
