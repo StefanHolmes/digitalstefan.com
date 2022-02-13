@@ -47,7 +47,9 @@ html {
 }
 
 input {
+    padding: 0.25rem;
     width: 100%;
+    font-size: 1.1rem;
 }
 
 .bread-table {
