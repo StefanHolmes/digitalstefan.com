@@ -14,6 +14,4 @@ function calcBread() {
     document.querySelector("#yeast_calc").textContent = yeastRatio * flourConst
     document.querySelector("#salt_calc").textContent = saltRatio * flourConst
     document.querySelector("#oil_calc").textContent = oilRatio * flourConst
-
-    return
 }
