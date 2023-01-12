@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DigitalStefan - GA4 </title>
+    <meta name="facebook-domain-verification" content="ldi42hubanb5v52jngpp7lzuuf6hlo" />
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Nobile&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>GA4 eCom DL Experiment #2 - Per product custom dimensions and metrics</h1>
+
+    <nav>
+        <ul>
+            <li><a href="css-experiments.html">CSS Experiments</a></li>
+            <li><a href="consent-mode.html">Google Consent Mode</a></li>
+            <li><a href="cookiepro-implemented.html">CookiePro</a></li>
+            <li><a href="bread-calculator.html">Bread Calculator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>January 12th 2023</h2>
+            <p>This is an experiment to find out what happens when you send custom dimensions and metrics per product to
+                GA4.</p>
+        </article>
+        <button onclick="addToCartCustom()">Add To Cart with no custom parameters</button>
+        <button onclick="addToCartNoCustom()">Add To Cart with custom parameters</button>
+    </main>
+
+
+    <script>
+        function addToCartCustom() {
+            window.dataLayer = window.dataLayer || []
+            dataLayer.push({
+                event: "add_to_cart",
+                ecommerce: {
+                    items: [
+                        {
+                            item_id: "SKU_12345",
+                            item_name: "Stan and Friends Tee",
+                            affiliation: "Google Merchandise Store",
+                            coupon: "SUMMER_FUN",
+                            discount: 2.22,
+                            index: 0,
+                            item_brand: "Google",
+                            item_category: "Apparel",
+                            item_category2: "Adult",
+                            item_category3: "Shirts",
+                            item_category4: "Crew",
+                            item_category5: "Short sleeve",
+                            item_list_id: "related_products",
+                            item_list_name: "Related Products",
+                            item_variant: "green",
+                            location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                            price: 9.99,
+                            quantity: 1,
+                            custom_dimenstion: "I am custom",
+                            custom_metric: 3.14,
+                            other_custom_metric: 42
+                        }
+                    ]
+                }
+            });
+        }
+
+        function addToCartNoCustom() {
+            window.dataLayer = window.dataLayer || []
+            dataLayer.push({
+                event: "add_to_cart",
+                ecommerce: {
+                    items: [
+                        {
+                            item_id: "SKU_12345",
+                            item_name: "Stan and Friends Tee",
+                            affiliation: "Google Merchandise Store",
+                            coupon: "SUMMER_FUN",
+                            discount: 2.22,
+                            index: 0,
+                            item_brand: "Google",
+                            item_category: "Apparel",
+                            item_category2: "Adult",
+                            item_category3: "Shirts",
+                            item_category4: "Crew",
+                            item_category5: "Short sleeve",
+                            item_list_id: "related_products",
+                            item_list_name: "Related Products",
+                            item_variant: "green",
+                            location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                            price: 9.99,
+                            quantity: 1
+                        }
+                    ]
+                }
+            });
+        }
+
+
+    </script>
+
+    <h2>External links</h2>
+    <a href="https://twitter.com/DigitalStefan" rel="noopener noreferrer" target="_blank">DigitalStefan's Twitter</a>
+
+    <footer>
+        <a href="/cookies.html">Review cookie policy and / or change your consent setting</a>
+    </footer>
+
+</body>
+
+</html>
