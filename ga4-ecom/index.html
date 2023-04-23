@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DigitalStefan - GA4 </title>
+    <title>DigitalStefan - GA4 Ecommerce</title>
     <meta name="facebook-domain-verification" content="ldi42hubanb5v52jngpp7lzuuf6hlo" />
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,103 +12,65 @@
 
 <body>
 
-    <h1>GA4 eCom DL Experiment</h1>
+    <h1>GA4 Ecommerce</h1>
 
     <nav>
         <ul>
-            <li><a href="css-experiments.html">CSS Experiments</a></li>
-            <li><a href="consent-mode.html">Google Consent Mode</a></li>
-            <li><a href="cookiepro-implemented.html">CookiePro</a></li>
-            <li><a href="bread-calculator.html">Bread Calculator</a></li>
+            <li><a href="/index.html">Back to homepage</a></li>
         </ul>
     </nav>
 
     <main>
         <article>
-            <h2>August 13th 2022</h2>
-            <p>This is an experiment to find out what happens when you send two "add_shipping_info" events to GA4. The
-                scenario is the client's purchase funnel includes a page to add shipping info and the next page is where
-                shipping method is selected. Can we send the event on both pages, or does that break reporting?</p>
-            <p>The first event will not include the "shipping_tier" parameter, while the second will.</p>
-            <p>"shipping_tier" is mentioned as being a required parameter, so this could be interesting.</p>
-            <p>The two buttons below will simulate the events. No visual feedback, this is something for the dev console
-                and data layer inspection extension.</p>
+            <h2>April 23rd 2023</h2>
+
+            <p>This is an intentionally flawed implementation of a GA4 ecommerce <b>purchase</b> event</p>
+
+            <button onclick="processPayment()">Complete Payment</button>
+
+            <script>
+                // Contains deliberate errors.
+                function processPayment() {
+                    window.dataLayer = window.dataLayer || []
+                    dataLayer.push({
+                        event: "purchase",
+                        ecommerce: {
+                            transaction_id: 9876543,
+                            tax: 3.80,
+                            shipping: 2,
+                            currency: "GBP",
+                            coupon: "SPRING15",
+                            items: [
+                                {
+                                    item_id: 5012345678900,
+                                    item_name: "GTM 4 Life Tee",
+                                    affiliation: "DigitalStefan Shop",
+                                    coupon: "SPRING15",
+                                    discount: 3.0,
+                                    value: 16.99,
+                                    index: 0,
+                                    item_brand: "DigitalStefan",
+                                    item_category: "Apparel",
+                                    item_category2: "Adult",
+                                    item_category3: "Shirts",
+                                    item_category4: "Crew",
+                                    item_category5: "Short sleeve",
+                                    item_list_id: "related_products",
+                                    item_list_name: "Related Products",
+                                    item_variant: "green",
+                                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                                    price: 19.99,
+                                    quantity: 1
+                                }
+                            ]
+                        }
+                    });
+                }
+            </script>
         </article>
-        <button onclick="shipInfo()">Add Shipping Address</button>
-        <button onclick="shipMethod()">Add Shipping Method</button>
     </main>
 
-
-    <script>
-        // Adapted from examples available at https://www.simoahava.com/analytics/google-analytics-4-ecommerce-guide-google-tag-manager/
-        function shipInfo() {
-            window.dataLayer = window.dataLayer || []
-            window.dataLayer.push({
-                event: 'shipping_info',
-                ecommerce: {
-                    currency: 'GBP',
-                    items: [{
-                        item_name: 'Finnish magical parka',
-                        item_id: 'mp1122',
-                        price: '31.10',
-                        item_brand: 'PARKA4LIFE',
-                        item_category: 'Apparel',
-                        item_category2: 'Coats',
-                        item_category3: 'Parkas',
-                        item_category4: 'Unisex',
-                        item_variant: 'Navy blue',
-                        quantity: '3'
-                    }, {
-                        item_name: 'Parka stain removal',
-                        item_id: 'psr1332',
-                        price: '5.99',
-                        item_brand: 'PARKA4LIFE',
-                        item_category: 'Apparel',
-                        item_category2: 'Utility',
-                        item_category3: 'Care product',
-                        quantity: '1'
-                    }]
-                }
-            });
-        }
-
-        function shipMethod() {
-            window.dataLayer = window.dataLayer || []
-            window.dataLayer.push({
-                event: 'shipping_method',
-                ecommerce: {
-                    shipping_tier: 'EdFex',
-                    currency: 'GBP',
-                    items: [{
-                        item_name: 'Finnish magical parka',
-                        item_id: 'mp1122',
-                        price: '31.10',
-                        item_brand: 'PARKA4LIFE',
-                        item_category: 'Apparel',
-                        item_category2: 'Coats',
-                        item_category3: 'Parkas',
-                        item_category4: 'Unisex',
-                        item_variant: 'Navy blue',
-                        quantity: '3'
-                    }, {
-                        item_name: 'Parka stain removal',
-                        item_id: 'psr1332',
-                        price: '5.99',
-                        item_brand: 'PARKA4LIFE',
-                        item_category: 'Apparel',
-                        item_category2: 'Utility',
-                        item_category3: 'Care product',
-                        quantity: '1'
-                    }]
-                }
-            });
-        }
-
-
-</script>
-
     <h2>External links</h2>
-    <a href="https://twitter.com/DigitalStefan" rel="noopener noreferrer" target="_blank">DigitalStefan's Twitter</a>
 
     <footer>
         <a href="/cookies.html">Review cookie policy and / or change your consent setting</a>
