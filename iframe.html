@@ -12,21 +12,108 @@
 
 <body>
 
-    <h1>DigitalStefan's Little Hand-Coded Website | Iframe Experiment</h1>
+    <h1>DigitalStefan's Little Hand-Coded Website</h1>
 
     <nav>
         <ul>
-        <li><a href="css-experiments.html">CSS Experiments</a></li>
-        <li><a href="consent-mode.html">Google Consent Mode</a></li>
-        <li><a href="cookiepro-implemented.html">CookiePro</a></li>
-        <li><a href="bread-calculator.html">Bread Calculator</a></li>
-        <li><a href="iframe.html">iFrame Experiment</a></li>
+            <li><a href="css-experiments.html">CSS Experiments</a></li>
+            <li><a href="consent-mode.html">Google Consent Mode</a></li>
+            <li><a href="cookiepro-implemented.html">CookiePro</a></li>
+            <li><a href="bread-calculator.html">Bread Calculator</a></li>
+            <li><a href="iframe.html">iFrame Experiment</a></li>
         </ul>
     </nav>
 
     <main>
         <p>Below is an iframe of honestflames.com</p>
         <iframe title="Iframe experiment" width="1000" height="400" src="https://honestflames.com"></iframe>
+        <article>
+            <h2>Two intentionally flawed GA4 ecommerce events</h2>
+            <hr>
+            <ul>
+                <li><img src="/img/zelda.png">
+                    <button onclick="addToCart()">Add to Cart</button>
+                </li>
+                <hr>
+
+                <li><img src="/img/visa.png">
+                    <button onclick="processPayment()">Complete Payment</button>
+                </li>
+            </ul>
+            <hr>
+            <script>
+                // Contains deliberate errors.
+                function processPayment() {
+                    window.dataLayer = window.dataLayer || []
+                    dataLayer.push({ ecommerce: null })
+                    dataLayer.push({
+                        event: "purchase",
+                        ecommerce: {
+                            transaction_id: 9876543,
+                            tax: 15.20,
+                            currency: "GBP",
+                            coupon: "SPRING15",
+                            items: [
+                                {
+                                    item_id: 5012345678900,
+                                    item_name: "Zelda: Tears of the Kingdom",
+                                    affiliation: "DigitalStefan Shop",
+                                    coupon: "SPRING15",
+                                    discount: 9.0,
+                                    value: 50.99,
+                                    index: 0,
+                                    item_brand: "DigitalStefan",
+                                    item_category: "Game",
+                                    item_category2: "Nintendo Switch",
+                                    item_category3: "3D",
+                                    item_category4: "Adventure",
+                                    item_category5: "30FPS",
+                                    item_list_id: "games1",
+                                    item_list_name: "Nintendo Games",
+                                    item_variant: "Collector's edition",
+                                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                                    price: 59.99,
+                                    quantity: 1
+                                }
+                            ]
+                        }
+                    });
+                }
+
+                function addToCart() {
+                    window.dataLayer = window.dataLayer || []
+                    dataLayer.push({ ecommerce: null })
+                    dataLayer.push({
+                        event: "add_to_cart",
+                        ecommerce: {
+                            value: 50.99,
+                            items: [
+                                {
+                                    item_id: 5012345678900,
+                                    item_name: "Zelda: Tears of the Kingdom",
+                                    affiliation: "DigitalStefan Shop",
+                                    coupon: "SPRING15",
+                                    discount: 9,
+                                    index: 0,
+                                    item_brand: "DigitalStefan",
+                                    item_category: "Game",
+                                    item_category2: "Nintendo Switch",
+                                    item_category3: "3D",
+                                    item_category4: "Adventure",
+                                    item_category5: "30FPS",
+                                    item_list_id: "games1",
+                                    item_list_name: "Nintendo Games",
+                                    item_variant: "Collector's edition",
+                                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                                    price: 59.99,
+                                    quantity: 1
+                                }
+                            ]
+                        }
+                    });
+                }
+            </script>
+        </article>
     </main>
 
     <h2>External links</h2>
