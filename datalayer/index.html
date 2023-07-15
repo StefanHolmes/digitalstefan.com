@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DigitalStefan</title>
+    <meta name="facebook-domain-verification" content="ldi42hubanb5v52jngpp7lzuuf6hlo" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Nobile&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Data Layer Testing</h1>
+
+    <main>
+        <article>
+            <h2>Data Layer Push Test</h2>
+            <p>Exploring a solution for Facebook problems picking up a total per <a
+                    src="https://www.reddit.com/r/GoogleTagManager/comments/14yqrsx/data_layer_variable_not_working/">this
+                    Reddit post</a></a></p>
+            <button onclick="dlPush()">Send totals to DL</button>
+        </article>
+    </main>
+
+    <script>
+        function dlPush() {
+            window.dataLayer = window.dataLayer || []
+            dataLayer.push(
+                {
+                    totals: {
+                        applied_coupons: [],
+                        discount_total: 0,
+                        subtotal: "12.99",
+                        total: "12.99"
+                    }
+                }
+            )
+        }
+    </script>
+
+</body>
+
+</html>
