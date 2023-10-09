@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DigitalStefan - Enhanced Conversions</title>
+    <meta name="facebook-domain-verification" content="ldi42hubanb5v52jngpp7lzuuf6hlo" />
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Nobile&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Enhanced Conversions - Oct 2023</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Back to homepage</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>October 9th 2023</h2>
+
+            <p>Testing Enhanced Conversions data layer</p>
+
+            <button onclick="completeConversion()">Test Conversion</button>
+
+            <script>
+                // Contains deliberate errors.
+                function completeConversion() {
+                    window.dataLayer = window.dataLayer || []
+                    dataLayer.push(
+                        {
+                            "event": "test_conversion",
+                            "test_conversion_data": {
+                                "email": "test@example.com",
+                                "sha256_email": "973dfe463ec85785f5f95af5ba3906eedb2d931c24e69824a89ea65dba4e813b"
+                            }
+                        });
+                }
+            </script>
+        </article>
+    </main>
+
+    <h2>External links</h2>
+
+</body>
+
+</html>
