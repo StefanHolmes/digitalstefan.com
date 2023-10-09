@@ -24,7 +24,7 @@
         <article>
             <h2>April 23rd 2023</h2>
 
-            <p>This is an intentionally flawed implementation of a GA4 ecommerce <b>purchase</b> event</p>
+            <p>Experimenting with array / object parameters and values</p>
 
             <button onclick="processPayment()">Complete Payment</button>
 
@@ -35,19 +35,19 @@
                     dataLayer.push({
                         event: "purchase",
                         ecommerce: {
-                            transaction_id: 9876543,
-                            tax: 3.80,
-                            shipping: 2,
+                            transaction_id: "9876543",
+                            value: 50.97,
+                            tax: 10.19,
+                            shipping: 0,
                             currency: "GBP",
                             coupon: "SPRING15",
                             items: [
                                 {
-                                    item_id: 5012345678900,
+                                    item_id: "5012345678900",
                                     item_name: "GTM 4 Life Tee",
                                     affiliation: "DigitalStefan Shop",
-                                    coupon: "SPRING15",
+                                    coupon: "SPRING",
                                     discount: 3.0,
-                                    value: 16.99,
                                     index: 0,
                                     item_brand: "DigitalStefan",
                                     item_category: "Apparel",
@@ -58,7 +58,44 @@
                                     item_list_id: "related_products",
                                     item_list_name: "Related Products",
                                     item_variant: "green",
-                                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                                    price: 19.99,
+                                    quantity: 1
+                                },
+                                {
+                                    item_id: "5012345678901",
+                                    item_name: "GTM 4 Eva Tee",
+                                    affiliation: "DigitalStefan Shop",
+                                    coupon: "SPRING",
+                                    discount: 3.0,
+                                    index: 1,
+                                    item_brand: "DigitalStefan",
+                                    item_category: "Apparel",
+                                    item_category2: "Adult",
+                                    item_category3: "Shirts",
+                                    item_category4: "Crew",
+                                    item_category5: "Short sleeve",
+                                    item_list_id: "related_products",
+                                    item_list_name: "Related Products",
+                                    item_variant: "blue",
+                                    price: 19.99,
+                                    quantity: 1
+                                },
+                                {
+                                    item_id: "5012345678902",
+                                    item_name: "GTM 4 Nerds Tee",
+                                    affiliation: "DigitalStefan Shop",
+                                    coupon: "SPRING",
+                                    discount: 3.0,
+                                    index: 2,
+                                    item_brand: "DigitalStefan",
+                                    item_category: "Apparel",
+                                    item_category2: "Adult",
+                                    item_category3: "Shirts",
+                                    item_category4: "Crew",
+                                    item_category5: "Short sleeve",
+                                    item_list_id: "related_products",
+                                    item_list_name: "Related Products",
+                                    item_variant: "blue",
                                     price: 19.99,
                                     quantity: 1
                                 }
