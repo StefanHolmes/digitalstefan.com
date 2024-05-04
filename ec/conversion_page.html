@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DigitalStefan - Enhanced Conversions</title>
+    <meta name="facebook-domain-verification" content="ldi42hubanb5v52jngpp7lzuuf6hlo" />
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Nobile&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Enhanced Conversions - May 2024</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Back to homepage</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <button onclick="completeConversion()">Test Conversion</button>
+
+            <script>
+                function completeConversion() {
+                    window.dataLayer = window.dataLayer || []
+                    dataLayer.push(
+                        {
+                            "event": "complete_conversion",
+
+                        });
+                }
+            </script>
+        </article>
+
+    </main>
+
+</body>
+
+</html>
