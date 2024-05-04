@@ -45,24 +45,26 @@
 
         <article>
             <h2>May 4th 2024</h2>
-
+        
             <p>Testing user data entry on page prior to conversion page</p>
-
+        
             <button onclick="completeDataEntry()">Test Data Entry</button>
-
+        
             <a href="conversion_page.html">Go To Conversion Page</a>
-
+        
             <script>
-                window.dataLayer = window.dataLayer || [];
-                dataLayer.push(
-                    {
-                        "event": "test_data_entry",
-                        "test_data": {
-                            "email": "stefan@tagmanaging.page",
-                            "sha256_email": "ddad436fb847f16cb8885cbdd31d977a8c04e3b7b2b8e564e3f8353ef94a61ff"
+                function completeDataEntry() {
+                    window.dataLayer = window.dataLayer || [];
+                    dataLayer.push(
+                        {
+                            "event": "test_data_entry",
+                            "test_data": {
+                                "email": "stefan@tagmanaging.page",
+                                "sha256_email": "ddad436fb847f16cb8885cbdd31d977a8c04e3b7b2b8e564e3f8353ef94a61ff"
+                            }
                         }
-                    }
-                )
+                    )
+                }
             </script>
         </article>
 
