@@ -55,15 +55,18 @@
             <script>
                 function completeDataEntry() {
                     window.dataLayer = window.dataLayer || [];
-                    dataLayer.push(
-                        {
-                            "event": "enhanced_conversion",
-                            "user_data": {
-                                // "email": "stefan@tagmanaging.page",
-                                "sha256_email_address": "ddad436fb847f16cb8885cbdd31d977a8c04e3b7b2b8e564e3f8353ef94a61ff"
+                    window.dataLayer.push({
+                        "event": "ec",
+                        "user_data": {
+                            "sha256_email_address": "ddad436fb847f16cb8885cbdd31d977a8c04e3b7b2b8e564e3f8353ef94a61ff",
+                            "sha256_phone_number": "13745d12e37fafef7863b39f53fe5e43f3861156b0bac7bb322b71efb9414ea9",
+                            "address": {
+                                "sha256_first_name": "52518386cc33022de894fa0af047bd62666a63c2a6a6e86650e26955058c5acf",
+                                "sha256_last_name": "ffd0aee5edcfef725d6c7d4b39ccb66bd090e7cef9d67b80e0bd6c3c72637e2d"
                             }
                         }
-                    )
+                    });
+
                 }
             </script>
 
